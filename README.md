@@ -1,4 +1,6 @@
 # ColorApp
+This application is built in Angular 
+When a user inputs the color name in the search bar the output is hex codes of the searched color and its corresponding shades related to it
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
