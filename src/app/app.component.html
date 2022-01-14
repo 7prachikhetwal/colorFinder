@@ -1,0 +1,23 @@
+
+<div class="header" > 
+  
+    <span id="text-centre-class">Hi User ! Welcome to Fleet Studio</span> 
+  <div class="space"></div>
+</div>
+
+<div class="content" role="main">
+  <div *ngIf="isLoading" id="pop-background" class="align-item-center">
+    <div id="loading"></div>
+  </div>
+  
+  <div class="search-container">
+    <input class="search-entry" [ngClass]="{'invalid': inValid}" #searchValue type="text">
+    <button class="search-btn ml"  (click)="getSearchColor(searchValue.value)">Search</button>
+  </div>
+
+  <ul class="card-container">
+    <ng-container *ngIf="searchColor">
+      <li *ngFor="let item of searchColor.colors" [ngStyle]="{'background-color': item.color}" class="card">{{item.color}}</li>
+    </ng-container>
+  </ul>
+</div>
